@@ -38,22 +38,35 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="hero" class="pt-32 pb-20 bg-gradient-to-br from-[#523B2A] to-[#7B6653] text-[#EEF0EB]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-[#EEF0EB]">
+  <!-- HERO: linke Hälfte braun + Text, rechte Hälfte reines Bild bis Rand -->
+  <section id="hero" class="flex min-h-screen pt-20">
+
+    <!-- Linke Hälfte: braun mit Text -->
+    <div class="w-full lg:w-1/2 bg-gradient-to-br from-[#523B2A] to-[#7B6653] flex items-center">
+      <div class="px-8 sm:px-12 lg:px-16 py-16 text-[#EEF0EB] max-w-2xl text-center mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
           Professionelle Gutachten für Solaranlagen auf landwirtschaftlichen Flächen
         </h1>
-        <p class="text-lg md:text-xl text-[#EEF0EB]/90 mb-8">
+        <p class="text-lg text-[#EEF0EB]/85 mb-10">
           terralytica begleitet Sie von der ersten Erkundung bis zur erfolgreichen Umsetzung Ihres Solarprojekts mit präzisen, verlässlichen Gutachten.
         </p>
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#fbfcf4] text-[#523B2A] rounded-lg font-semibold hover:bg-[#fbfcf4]/90 transition-colors">
+        <a href="#contact" class="inline-flex items-center gap-2 px-8 py-3 bg-[#fbfcf4] text-[#523B2A] rounded-lg font-semibold hover:bg-[#fbfcf4]/90 transition-colors">
           Jetzt Kontakt aufnehmen
           <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
       </div>
     </div>
+
+    <!-- Rechte Hälfte: Bild randlos bis Seitenrand, oben und unten -->
+    <div class="hidden lg:block lg:w-1/2">
+      <img
+        src="entrance-bild.jpg"
+        alt="Solaranlage auf landwirtschaftlicher Fläche"
+        class="w-full h-full object-cover"
+        onerror="this.style.background='#8B9E82'"
+      />
+    </div>
+
   </section>
 
   <!-- SERVICES -->
@@ -226,38 +239,35 @@
   </section>
 
   <!-- FOOTER -->
-<footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-3 gap-8 mb-8">
-      <!-- Spalte 1: Links-bündig -->
-      <div>
-        <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">terralytica</h3>
-        <p class="text-[#fbfcf4]/80">
-          Ihr Partner für professionelle Gutachten im Bereich Solaranlagen auf landwirtschaftlichen Flächen.
-        </p>
-      </div>
-      <!-- Spalte 2: Exakt mittig -->
-      <div class="flex flex-col items-center text-center">
-        <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
-        <div class="space-y-2 text-[#fbfcf4]/80">
-          <p>E-Mail: info@terralytica.de</p>
-          <p>Pfaffenholz 2<br/>91126 Kammerstein<br/>Deutschland</p>
+  <footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">terralytica</h3>
+          <p class="text-[#fbfcf4]/80">
+            Ihr Partner für professionelle Gutachten im Bereich Solaranlagen auf landwirtschaftlichen Flächen.
+          </p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
+          <div class="space-y-2 text-[#fbfcf4]/80">
+            <p>E-Mail: info@terralytica.de</p>
+            <p>Pfaffenholz 2<br/>91126 Kammerstein<br/>Deutschland</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
+          <div class="space-y-2">
+            <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
+            <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
+          </div>
         </div>
       </div>
-      <!-- Spalte 3: Rechts-bündig -->
-      <div class="text-right">
-        <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
-        <div class="space-y-2">
-          <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
-          <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
-        </div>
+      <div class="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
+        <p>&copy; 2026 terralytica GmbH. Alle Rechte vorbehalten.</p>
       </div>
     </div>
-    <div class="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
-      <p>&copy; 2026 terralytica GmbH. Alle Rechte vorbehalten.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
     lucide.createIcons();
