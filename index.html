@@ -22,7 +22,6 @@
       }
     }
   </script>
-  <!-- Lucide Icons via CDN -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -34,24 +33,20 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <!-- Logo -->
         <a href="#hero" class="flex items-center">
           <img src="logo.png" alt="terralytica" class="h-12"
                onerror="this.style.display='none';this.nextSibling.style.display='inline'"
           /><span style="display:none;font-size:1.4rem;font-weight:700;color:#523B2A;">terralytica</span>
         </a>
-        <!-- Desktop Nav -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
           <a href="#about"    class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
           <a href="#contact"  class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
         </div>
-        <!-- Mobile Hamburger -->
         <button id="menuBtn" class="md:hidden text-[#523B2A]" onclick="toggleMenu()">
           <i data-lucide="menu" class="w-7 h-7"></i>
         </button>
       </div>
-      <!-- Mobile Menu -->
       <div id="mobileMenu" class="hidden md:hidden pb-4 flex flex-col space-y-3">
         <a href="#services" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Services</a>
         <a href="#about"    onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
@@ -70,8 +65,7 @@
         <p class="text-lg md:text-xl text-[#EEF0EB]/90 mb-8">
           terralytica begleitet Sie von der ersten Erkundung bis zur erfolgreichen Umsetzung Ihres Solarprojekts mit präzisen, verlässlichen Gutachten.
         </p>
-        <a href="#contact"
-           class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#fbfcf4] text-[#523B2A] rounded-lg font-semibold hover:bg-[#fbfcf4]/90 transition-colors">
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#fbfcf4] text-[#523B2A] rounded-lg font-semibold hover:bg-[#fbfcf4]/90 transition-colors">
           Jetzt Kontakt aufnehmen
           <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
@@ -90,7 +84,6 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Card 1 -->
         <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
           <div class="flex flex-col items-center text-center mb-6">
             <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
@@ -107,7 +100,6 @@
           </ul>
         </div>
 
-        <!-- Card 2 -->
         <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
           <div class="flex flex-col items-center text-center mb-6">
             <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
@@ -124,7 +116,6 @@
           </ul>
         </div>
 
-        <!-- Card 3 -->
         <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
           <div class="flex flex-col items-center text-center mb-6">
             <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
@@ -141,7 +132,6 @@
           </ul>
         </div>
 
-        <!-- Card 4 -->
         <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
           <div class="flex flex-col items-center text-center mb-6">
             <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
@@ -184,7 +174,7 @@
         <div>
           <img src="agri-pv.jpg" alt="Agri-PV Solar Installation"
                class="w-full h-full object-cover rounded-lg shadow-lg"
-               onerror="this.style.background='#8B9E82';this.style.minHeight='300px';this.alt='Bild folgt'" />
+               onerror="this.style.background='#8B9E82';this.style.minHeight='300px'" />
         </div>
       </div>
     </div>
@@ -202,7 +192,7 @@
       <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8">
         <h3 class="text-2xl font-semibold text-[#523B2A] mb-6">Nachricht senden</h3>
         <!-- FORMSPREE: Ersetze YOUR_FORM_ID mit deiner echten ID von formspree.io -->
-        <form action="https://formspree.io/f/mdalyzgg" method="POST" class="space-y-6">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
           <div>
             <label for="name" class="block text-[#523B2A] mb-2 font-medium">Name *</label>
             <input type="text" id="name" name="name" required
@@ -233,6 +223,17 @@
               class="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
               placeholder="Beschreiben Sie Ihr Anliegen..."></textarea>
           </div>
+          <!-- DSGVO-Checkbox -->
+          <div>
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" name="datenschutz" required class="mt-1 accent-[#523B2A]" />
+              <span class="text-sm text-[#7B6653]">
+                Ich habe die
+                <a href="datenschutz.html" class="text-[#523B2A] underline hover:text-[#7B6653]">Datenschutzerklärung</a>
+                gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *
+              </span>
+            </label>
+          </div>
           <button type="submit"
             class="w-full bg-[#523B2A] text-[#EEF0EB] py-3 px-6 rounded-lg font-semibold hover:bg-[#7B6653] transition-colors">
             Nachricht senden
@@ -262,16 +263,18 @@
         </div>
         <div>
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
-          <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
+          <div class="space-y-2">
+            <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
+            <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
+          </div>
         </div>
       </div>
       <div class="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
-        <p>&copy; 2026 terralytica. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 terralytica GmbH. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Init Lucide Icons + Mobile Menu -->
   <script>
     lucide.createIcons();
     function toggleMenu() {
