@@ -1,0 +1,329 @@
+import { 
+  FlaskConical, 
+  Leaf, 
+  Shield, 
+  Map,
+  CheckCircle2,
+  Mail,
+  MapPin,
+  ArrowRight
+} from "lucide-react";
+import logoImage from "figma:asset/e272b26373a7de69c9c73469dc9911339c6d1735.png";
+import agriPvImage from "figma:asset/3002500708db8b72183c390d01f88f0f54e86336.png";
+import { ImageWithFallback } from "./components/figma/ImageWithFallback";
+
+function App() {
+  const services = [
+    {
+      icon: FlaskConical,
+      title: "Bodengutachten (statisch und chemisch)",
+      description: "Detaillierte Analyse der Bodenbeschaffenheit, Tragfähigkeit und chemischen Zusammensetzung.",
+      details: [
+        "Ermittlung der Bodentragfähigkeit und Auszugskräfte",
+        "Chemische Bodenanalyse und pH-Werte",
+        "Bewertung der Bodenstruktur und -eigenschaften",
+        "Optimierung der Fundamentplanung"
+      ]
+    },
+    {
+      icon: Leaf,
+      title: "Naturschutzgutachten",
+      description: "Umfassende Bewertung der ökologischen Auswirkungen und Entwicklung naturverträglicher Lösungen.",
+      details: [
+        "Erfassung geschützter Arten und Biotope",
+        "Bewertung der Umweltauswirkungen",
+        "Entwicklung von Ausgleichs- und Ersatzmaßnahmen",
+        "Sicherstellung der rechtlichen Konformität"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Kampfmittelgutachten",
+      description: "Professionelle Untersuchung und Bewertung potenzieller Kampfmittelbelastungen im Baugrund.",
+      details: [
+        "Historische Recherche",
+        "Luftbildauswertung",
+        "Bewertung des Kampfmittelverdachts",
+        "Gewährleistung der Arbeitssicherheit"
+      ]
+    },
+    {
+      icon: Map,
+      title: "Vorerkundung",
+      description: "Gründliche Standortanalyse mit präziser Vermessung und topografischer Erfassung für Ihr Solarprojekt.",
+      details: [
+        "Vermessung und topografische Aufnahme",
+        "Bodenradar und Thermografie",
+        "Identifikation potenzieller Herausforderungen",
+        "Grundlage für weitere Planungsschritte"
+      ]
+    }
+  ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#fbfcf4]">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <button onClick={() => scrollToSection('hero')} className="flex items-center">
+              <img src={logoImage} alt="terralytica" className="h-12" />
+            </button>
+
+            {/* Desktop Navigation */}
+            <div className="flex items-center space-x-8">
+              <button
+                onClick={() => scrollToSection('services')}
+                className="text-[#523B2A] hover:text-[#7B6653] transition-colors"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className="text-[#523B2A] hover:text-[#7B6653] transition-colors"
+              >
+                Über uns
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors"
+              >
+                Kontakt
+              </button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section id="hero" className="pt-32 pb-20 bg-gradient-to-br from-[#523B2A] to-[#7B6653] text-[#EEF0EB]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+              Professionelle Gutachten für Solaranlagen auf landwirtschaftlichen Flächen
+            </h1>
+            <p className="text-lg md:text-xl text-[#EEF0EB]/90 mb-8">
+              terralytica begleitet Sie von der ersten Erkundung bis zur erfolgreichen Umsetzung Ihres Solarprojekts mit präzisen, verlässlichen Gutachten.
+            </p>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#fbfcf4] text-[#523B2A] rounded-lg hover:bg-[#fbfcf4]/90 transition-colors"
+            >
+              Jetzt Kontakt aufnehmen
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl text-[#523B2A] mb-4">
+              Unsere Leistungen
+            </h2>
+            <p className="text-lg text-[#7B6653] max-w-2xl mx-auto">
+              Wir bieten umfassende Gutachten für alle Aspekte Ihres Solarprojekts auf landwirtschaftlichen Flächen.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col"
+              >
+                <div className="flex flex-col items-center text-center mb-6">
+                  <div className="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-[#523B2A]" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl text-[#523B2A] mb-3 min-h-[3.5rem] flex items-center">{service.title}</h3>
+                  <p className="text-[#7B6653]">{service.description}</p>
+                </div>
+                <div className="space-y-3 flex-grow">
+                  {service.details.map((detail, detailIndex) => (
+                    <div key={detailIndex} className="flex items-start">
+                      <CheckCircle2 className="w-5 h-5 text-[#8B9E82] flex-shrink-0 mt-0.5" />
+                      <span className="ml-3 text-[#523B2A]">{detail}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl text-[#523B2A] mb-6">
+                Warum terralytica?
+              </h2>
+              <p className="text-lg text-[#7B6653] mb-6">
+                Mit unserer Expertise und langjährigen Erfahrung sind wir Ihr verlässlicher Partner für die erfolgreiche Realisierung von Solaranlagen auf landwirtschaftlichen Flächen.
+              </p>
+              <p className="text-lg text-[#7B6653] mb-8">
+                terralytica wurde mit der Vision gegründet, die Realisierung von Solaranlagen auf landwirtschaftlichen Flächen durch präzise, umfassende Gutachten zu unterstützen. Wir verstehen die besonderen Anforderungen, die diese Projekte mit sich bringen.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Spezialisierte Expertise in landwirtschaftlichen Solarprojekten",
+                  "Schnelle und präzise Gutachtenerstellung",
+                  "Ganzheitliche Beratung von der Vorerkundung bis zur Umsetzung",
+                  "Nachhaltige und naturverträgliche Lösungsansätze"
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle2 className="w-6 h-6 text-[#8B9E82] flex-shrink-0 mt-0.5" />
+                    <span className="ml-3 text-[#523B2A]">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <img
+                src={agriPvImage}
+                alt="Agri-PV Solar Installation"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-[#523B2A] mb-4">
+              Kontaktieren Sie uns
+            </h2>
+            <p className="text-lg text-[#7B6653] max-w-2xl mx-auto">
+              Haben Sie Fragen zu unseren Services oder möchten Sie ein Projekt besprechen? 
+              Wir freuen uns auf Ihre Nachricht.
+            </p>
+          </div>
+
+          {/* Contact Form */}
+          <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8">
+            <h3 className="text-2xl text-[#523B2A] mb-6">
+              Nachricht senden
+            </h3>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-[#523B2A] mb-2">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
+                  placeholder="Ihr Name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-[#523B2A] mb-2">
+                  E-Mail *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
+                  placeholder="ihre.email@beispiel.de"
+                />
+              </div>
+              <div>
+                <label htmlFor="service" className="block text-[#523B2A] mb-2">
+                  Interessierter Service
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  className="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
+                >
+                  <option value="">Bitte wählen...</option>
+                  <option value="soil">Bodengutachten</option>
+                  <option value="nature">Naturschutzgutachten</option>
+                  <option value="munitions">Kampfmittelgutachten</option>
+                  <option value="survey">Vorerkundung</option>
+                  <option value="multiple">Mehrere Services</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-[#523B2A] mb-2">
+                  Nachricht *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
+                  placeholder="Beschreiben Sie Ihr Anliegen..."
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-[#523B2A] text-[#EEF0EB] py-3 px-6 rounded-lg hover:bg-[#7B6653] transition-colors"
+              >
+                Nachricht senden
+              </button>
+              <p className="text-sm text-[#7B6653]">
+                * Pflichtfelder
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#523B2A] text-[#fbfcf4] py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-[#fbfcf4] mb-4">terralytica</h3>
+              <p className="text-[#fbfcf4]/80">
+                Ihr Partner für professionelle Gutachten im Bereich Solaranlagen auf landwirtschaftlichen Flächen.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-[#fbfcf4] mb-4">Kontakt</h3>
+              <div className="space-y-2 text-[#fbfcf4]/80">
+                <p>E-Mail: info@terralytica.de</p>
+                <p>Pfaffenholz 2<br />91126 Kammerstein<br />Deutschland</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-[#fbfcf4] mb-4">Rechtliches</h3>
+              <div className="space-y-2">
+                <button className="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">
+                  Impressum
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
+            <p>&copy; 2026 terralytica. Alle Rechte vorbehalten.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
