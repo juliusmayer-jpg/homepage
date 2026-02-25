@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
   </style>
 </head>
 <body class="bg-[#fbfcf4]">
@@ -17,9 +18,9 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <a href="#hero" class="flex items-center">
-          <img src="logo.png" alt="terralytica" class="h-12"
+          <img src="logo.png" alt="terralytica" class="h-20 sm:h-24 md:h-28"
                onerror="this.style.display='none';this.nextSibling.style.display='inline'"
-          /><span style="display:none;font-size:1.4rem;font-weight:700;color:#523B2A;">terralytica</span>
+          /><span style="display:none;font-size:2rem;font-weight:700;color:#523B2A;">terralytica</span>
         </a>
         <div class="hidden md:flex items-center space-x-8">
           <a href="#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
@@ -38,14 +39,12 @@
     </nav>
   </header>
 
-  <!-- HERO: linke Hälfte braun + Text, rechte Hälfte reines Bild bis Rand -->
+  <!-- HERO -->
   <section id="hero" class="flex min-h-screen pt-20">
-
-    <!-- Linke Hälfte: braun mit Text -->
     <div class="w-full lg:w-1/2 bg-gradient-to-br from-[#523B2A] to-[#7B6653] flex items-center">
       <div class="px-8 sm:px-12 lg:px-16 py-16 text-[#EEF0EB] max-w-2xl text-center mx-auto">
         <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Professionelle Gutachten für Solaranlagen auf landwirtschaftlichen Flächen
+          Professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen
         </h1>
         <p class="text-lg text-[#EEF0EB]/85 mb-10">
           terralytica begleitet Sie von der ersten Erkundung bis zur erfolgreichen Umsetzung Ihres Solarprojekts mit präzisen, verlässlichen Gutachten.
@@ -56,8 +55,6 @@
         </a>
       </div>
     </div>
-
-    <!-- Rechte Hälfte: Bild randlos bis Seitenrand, oben und unten -->
     <div class="hidden lg:block lg:w-1/2">
       <img
         src="header.png"
@@ -66,7 +63,6 @@
         onerror="this.style.background='#8B9E82'"
       />
     </div>
-
   </section>
 
   <!-- SERVICES -->
@@ -83,9 +79,25 @@
         <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
           <div class="flex flex-col items-center text-center mb-6">
             <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="map" class="w-8 h-8 text-[#523B2A]"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Vorerkundung</h3>
+            <p class="text-[#7B6653]">Gründliche Standortanalyse mit präziser Vermessung und topografischer Erfassung für Ihr Solarprojekt.</p>
+          </div>
+          <ul class="space-y-3 flex-grow">
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Vermessung und topografische Aufnahme</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Bodenradar und Thermografie</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Identifikation potenzieller Herausforderungen</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Grundlage für weitere Planungsschritte</span></li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
+          <div class="flex flex-col items-center text-center mb-6">
+            <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
               <i data-lucide="flask-conical" class="w-8 h-8 text-[#523B2A]"></i>
             </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Bodengutachten (statisch und chemisch)</h3>
+            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Bodengutachten</h3>
             <p class="text-[#7B6653]">Detaillierte Analyse der Bodenbeschaffenheit, Tragfähigkeit und chemischen Zusammensetzung.</p>
           </div>
           <ul class="space-y-3 flex-grow">
@@ -107,7 +119,7 @@
           <ul class="space-y-3 flex-grow">
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Erfassung geschützter Arten und Biotope</span></li>
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Bewertung der Umweltauswirkungen</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Entwicklung von Ausgleichs- und Ersatzmaßnahmen</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Ermittlung von Ausgleichs- und Ersatzmaßnahmen</span></li>
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Sicherstellung der rechtlichen Konformität</span></li>
           </ul>
         </div>
@@ -123,24 +135,8 @@
           <ul class="space-y-3 flex-grow">
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Historische Recherche</span></li>
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Luftbildauswertung</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Bewertung des Kampfmittelverdachts</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Bewertung der Kampfmittelwahrscheinlichkeit</span></li>
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Gewährleistung der Arbeitssicherheit</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
-          <div class="flex flex-col items-center text-center mb-6">
-            <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
-              <i data-lucide="map" class="w-8 h-8 text-[#523B2A]"></i>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Vorerkundung</h3>
-            <p class="text-[#7B6653]">Gründliche Standortanalyse mit präziser Vermessung und topografischer Erfassung für Ihr Solarprojekt.</p>
-          </div>
-          <ul class="space-y-3 flex-grow">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Vermessung und topografische Aufnahme</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Bodenradar und Thermografie</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Identifikation potenzieller Herausforderungen</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Grundlage für weitere Planungsschritte</span></li>
           </ul>
         </div>
 
@@ -163,7 +159,7 @@
           <ul class="space-y-4">
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Spezialisierte Expertise in landwirtschaftlichen Solarprojekten</span></li>
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Schnelle und präzise Gutachtenerstellung</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Ganzheitliche Beratung von der Vorerkundung bis zur Umsetzung</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Ganzheitliche Beratung von der Vorerkundung bis zur Gutachtenübergabe</span></li>
             <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Nachhaltige und naturverträgliche Lösungsansätze</span></li>
           </ul>
         </div>
@@ -241,21 +237,21 @@
   <!-- FOOTER -->
   <footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-3 gap-8 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
         <div>
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">terralytica</h3>
           <p class="text-[#fbfcf4]/80">
-            Ihr Partner für professionelle Gutachten im Bereich Solaranlagen auf landwirtschaftlichen Flächen.
+            Der Partner für professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen.
           </p>
         </div>
-        <div class="flex flex-col items-center text-center">
+        <div class="flex flex-col sm:items-center sm:text-center">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
           <div class="space-y-2 text-[#fbfcf4]/80">
             <p>E-Mail: info@terralytica.de</p>
             <p>Pfaffenholz 2<br/>91126 Kammerstein<br/>Deutschland</p>
           </div>
         </div>
-        <div class="text-right">
+        <div class="sm:text-right">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
           <div class="space-y-2">
             <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
