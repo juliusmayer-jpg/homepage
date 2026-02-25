@@ -144,48 +144,41 @@
     </div>
   </section>
 
-  <!-- ABOUT: Bild links randlos, Text rechts – wie Hero umgekehrt -->
-  <section id="about" class="flex flex-col lg:flex-row">
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-    <!-- Linke Hälfte: Bild randlos -->
-    <div class="hidden lg:block lg:w-1/2">
-      <img
-        src="agri-pv.jpg"
-        alt="Agri-PV Solar Installation"
-        class="w-full h-full object-cover"
-        onerror="this.style.background='#8B9E82'"
-      />
-    </div>
-
-    <!-- Rechte Hälfte: weißer Hintergrund mit Text -->
-    <div class="w-full lg:w-1/2 bg-white flex items-center">
-      <div class="px-8 sm:px-12 lg:px-16 py-16 max-w-2xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-6">Warum terralytica?</h2>
-        <p class="text-lg text-[#7B6653] mb-6">
-          Mit unserer Expertise und langjährigen Erfahrung sind wir Ihr verlässlicher Partner für die erfolgreiche Realisierung von Solaranlagen auf landwirtschaftlichen Flächen.
-        </p>
-        <p class="text-lg text-[#7B6653] mb-8">
-          terralytica wurde mit der Vision gegründet, die Realisierung von Solaranlagen auf landwirtschaftlichen Flächen durch präzise, umfassende Gutachten zu unterstützen. Wir verstehen die besonderen Anforderungen, die diese Projekte mit sich bringen.
-        </p>
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Spezialisierte Expertise in landwirtschaftlichen Solarprojekten</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Schnelle und präzise Gutachtenerstellung</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Ganzheitliche Beratung von der Vorerkundung bis zur Gutachtenübergabe</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Nachhaltige und naturverträgliche Lösungsansätze</span></li>
-        </ul>
-
-        <!-- Bild für Mobile (unterhalb des Textes) -->
-        <div class="mt-10 lg:hidden">
+        <!-- Bild links: gleiche Rundung wie Service-Karten, aligned oben/unten per JS -->
+        <div id="aboutImgWrap">
           <img
             src="agri-pv.jpg"
             alt="Agri-PV Solar Installation"
+            id="aboutImg"
             class="w-full rounded-lg shadow-lg object-cover"
-            onerror="this.style.background='#8B9E82';this.style.minHeight='200px'"
+            onerror="this.style.background='#8B9E82';this.style.minHeight='300px'"
           />
         </div>
+
+        <!-- Text rechts -->
+        <div id="aboutLeft">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-6">Warum terralytica?</h2>
+          <p class="text-lg text-[#7B6653] mb-6">
+            Mit unserer Expertise und langjährigen Erfahrung sind wir Ihr verlässlicher Partner für die erfolgreiche Realisierung von Solaranlagen auf landwirtschaftlichen Flächen.
+          </p>
+          <p class="text-lg text-[#7B6653] mb-8">
+            terralytica wurde mit der Vision gegründet, die Realisierung von Solaranlagen auf landwirtschaftlichen Flächen durch präzise, umfassende Gutachten zu unterstützen. Wir verstehen die besonderen Anforderungen, die diese Projekte mit sich bringen.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Spezialisierte Expertise in landwirtschaftlichen Solarprojekten</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Schnelle und präzise Gutachtenerstellung</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Ganzheitliche Beratung von der Vorerkundung bis zur Gutachtenübergabe</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-6 h-6 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#523B2A]">Nachhaltige und naturverträgliche Lösungsansätze</span></li>
+          </ul>
+        </div>
+
       </div>
     </div>
-
   </section>
 
   <!-- CONTACT -->
@@ -286,6 +279,17 @@
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('hidden');
     }
+    function matchImageHeight() {
+      const left = document.getElementById('aboutLeft');
+      const img  = document.getElementById('aboutImg');
+      if (window.innerWidth >= 1024 && left && img) {
+        img.style.height = left.offsetHeight + 'px';
+      } else {
+        img.style.height = 'auto';
+      }
+    }
+    window.addEventListener('load', matchImageHeight);
+    window.addEventListener('resize', matchImageHeight);
   </script>
 
 </body>
