@@ -1,44 +1,222 @@
-<!doctype html>
+<!-- datenschutz.html (nur Header/Footer/Logo an index angeglichen; Inhalt aus deiner Datei beibehalten) -->
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datenschutzerklärung | terralytica GmbH</title>
-  <meta name="robots" content="index,follow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung | terralytica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+  </style>
 </head>
-<body>
-  <a href="index.html" aria-label="Zurück zur Homepage">← Zurück zur Homepage</a>
 
-  <main>
-    <h1>Datenschutzerklärung</h1>
-    <p><strong>Stand:</strong> Februar 2026</p>
+<body class="bg-[#fbfcf4]">
+  <!-- HEADER (wie index) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="logo.png" alt="terralytica" class="h-20 sm:h-24 md:h-28"
+               onerror="this.style.display='none'; this.nextSibling.style.display='inline';" />
+          <span style="display:none; font-size:2rem; font-weight:700; color:#523B2A;">terralytica</span>
+        </a>
 
-    <section id="verantwortlicher">
-      <h2>1. Name und Kontaktdaten des Verantwortlichen</h2>
-      <p><strong>Verantwortlicher</strong> im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
-      <address>
-        terralytica GmbH<br />
-        Pfaffenholz 2<br />
-        91126 Kammerstein<br />
-        Deutschland<br />
-        Geschäftsführer: Julius Mayer<br />
-        E-Mail: <a href="mailto:info@terralytica.de">info@terralytica.de</a>
-      </address>
-    </section>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
+          <a href="index.html#about" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
+          <a href="index.html#contact" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
+        </div>
 
-    <section id="dsb">
-      <h2>2. Kontaktdaten des Datenschutzbeauftragten</h2>
-      <p>Ein Datenschutzbeauftragter ist derzeit nicht benannt.</p>
-    </section>
+        <button class="md:hidden text-[#523B2A]" onclick="toggleMenu()" aria-label="Menü öffnen">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
 
-    <section id="zwecke-rechtsgrundlagen">
-      <h2>3. Zwecke und Rechtsgrundlagen der Verarbeitung</h2>
+      <div id="mobileMenu" class="hidden md:hidden pb-4 flex flex-col space-y-3">
+        <a href="index.html#services" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Services</a>
+        <a href="index.html#about" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
+        <a href="index.html#contact" onclick="toggleMenu()" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg text-center">Kontakt</a>
+      </div>
+    </nav>
+  </header>
 
-      <h3>3.1 Informatorische Nutzung der Website / Hosting (GitHub Pages)</h3>
-      <p>
-        Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) bereitgestellt.
-        Beim Aufruf der Website werden technisch bedingt Daten verarbeitet, die Ihr Browser übermittelt (sog. Server-Logdaten).
-      </p>
-      <p><strong>Verarbeitete Daten (Beispiele):</strong> IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite/Datei, Referrer-URL, Browsertyp/-version, Betriebssystem, Hostname.</p>
-      <p><strong>Zweck:</strong> Auslieferung der Website, Gewährleistung von Stabilität und Sicherheit, Fehleranalyse sowie Schutz vor Missbrauch/Angriffen.</p>
-      <p><stron
+  <!-- DATENSCHUTZ INHALT (aus deiner Datei) -->
+  <main class="pt-32 pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-2">Datenschutzerklärung</h1>
+      <p class="text-[#7B6653] mb-10">Stand: Februar 2026</p>
+
+      <!-- 1. Verantwortlicher -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">1. Verantwortlicher (Art. 13 Abs. 1 DSGVO)</h2>
+        <p class="text-[#7B6653]">terralytica GmbH</p>
+        <p class="text-[#7B6653]">Pfaffenholz 2, 91126 Kammerstein, Deutschland</p>
+        <p class="text-[#7B6653]">Geschäftsführer: Julius Mayer</p>
+        <p class="text-[#7B6653] mt-2">
+          E-Mail:
+          <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
+        </p>
+      </section>
+
+      <!-- 2. Allgemeine Hinweise -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+        <p class="text-[#7B6653]">
+          Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber,
+          welche personenbezogenen Daten wir erheben, wie wir diese verwenden und welche Rechte Sie diesbezüglich haben.
+          Die Verarbeitung Ihrer personenbezogenen Daten erfolgt gemäß der Datenschutz-Grundverordnung (DSGVO) sowie dem Bundesdatenschutzgesetz (BDSG).
+        </p>
+      </section>
+
+      <!-- 3. Hosting -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">3. Hosting (GitHub Pages)</h2>
+        <p class="text-[#7B6653]">
+          Diese Website wird auf Servern von <strong>GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</strong> gehostet (GitHub Pages).
+          Beim Aufruf unserer Website werden automatisch sogenannte Server-Logfiles erhoben, die Ihr Browser übermittelt.
+          Dazu gehören: IP-Adresse, Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname und Uhrzeit der Anfrage.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          Diese Daten werden von GitHub erhoben und können in die USA übermittelt werden. GitHub ist gemäß dem EU-US Data Privacy Framework zertifiziert.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website).
+          Weitere Informationen finden Sie in der
+          <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von GitHub</a>.
+        </p>
+      </section>
+
+      <!-- 4. Kontaktformular -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">4. Kontaktformular (Formspree)</h2>
+        <p class="text-[#7B6653]">
+          Für die Verarbeitung von Kontaktanfragen nutzen wir den Dienst <strong>Formspree</strong> (Formspree, Inc., 2261 Market Street #5196, San Francisco, CA 94114, USA).
+          Wenn Sie unser Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail-Adresse, gewählter Service, Nachricht) an Formspree übermittelt
+          und von dort an unsere E-Mail-Adresse info@terralytica.de weitergeleitet.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Zweck:</strong> Bearbeitung Ihrer Kontaktanfrage.<br />
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation mit Interessenten) bzw. Art. 6 Abs. 1 lit. b DSGVO, sofern die Anfrage auf den Abschluss eines Vertrages abzielt.<br />
+          <strong>Speicherdauer:</strong> Die Daten werden gelöscht, sobald Ihre Anfrage abschließend bearbeitet wurde, spätestens nach 6 Monaten.<br />
+          <strong>Drittlandübermittlung:</strong> Formspree verarbeitet Daten in den USA. Formspree ist gemäß dem EU-US Data Privacy Framework zertifiziert.
+          Weitere Informationen:
+          <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von Formspree</a>.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          Mit dem Absenden des Kontaktformulars erklären Sie sich mit der Übermittlung Ihrer Daten an Formspree einverstanden.
+          Sie können Ihre Einwilligung jederzeit per E-Mail an info@terralytica.de widerrufen.
+        </p>
+      </section>
+
+      <!-- 5. E-Mail -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">5. Kontaktaufnahme per E-Mail</h2>
+        <p class="text-[#7B6653]">
+          Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage
+          und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
+      </section>
+
+      <!-- 6. Cookies -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">6. Cookies</h2>
+        <p class="text-[#7B6653]">
+          Diese Website verwendet <strong>keine Cookies</strong> und setzt keine Tracking- oder Analyse-Tools ein.
+          Es werden keine persönlichen Nutzerdaten gespeichert oder ausgewertet.
+        </p>
+      </section>
+
+      <!-- 7. SSL -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">7. SSL-Verschlüsselung</h2>
+        <p class="text-[#7B6653]">
+          Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL/TLS-Verschlüsselung.
+          Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt
+          und an dem Schloss-Symbol in Ihrer Browserzeile.
+        </p>
+      </section>
+
+      <!-- 8. Rechte -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">8. Ihre Rechte (Art. 15–22 DSGVO)</h2>
+        <p class="text-[#7B6653] mb-3">Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+        <ul class="text-[#7B6653] space-y-2 list-none">
+          <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
+          <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO)</li>
+          <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO)</li>
+          <li><strong>Recht auf Einschränkung</strong> (Art. 18 DSGVO)</li>
+          <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+          <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO)</li>
+        </ul>
+        <p class="text-[#7B6653] mt-3">
+          Zur Ausübung Ihrer Rechte wenden Sie sich an:
+          <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
+        </p>
+      </section>
+
+      <!-- 9. Aufsichtsbehörde -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <p class="text-[#7B6653]">
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren.
+          Die zuständige Aufsichtsbehörde für Bayern ist:
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong><br />
+          Promenade 18, 91522 Ansbach<br />
+          E-Mail: <a href="mailto:poststelle@lda.bayern.de" class="text-[#523B2A] hover:text-[#7B6653] underline">poststelle@lda.bayern.de</a><br />
+          Web:
+          <a href="https://www.lda.bayern.de/" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">www.lda.bayern.de</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER (wie index) -->
+  <footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">terralytica</h3>
+          <p class="text-[#fbfcf4]/80">
+            Der Partner für professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:items-center sm:text-center">
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
+          <div class="space-y-2 text-[#fbfcf4]/80">
+            <p>E-Mail: info@terralytica.de</p>
+            <p>Pfaffenholz 2<br>91126 Kammerstein<br>Deutschland</p>
+          </div>
+        </div>
+
+        <div class="sm:text-right">
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
+          <div class="space-y-2">
+            <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
+            <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
+        <p>&copy; 2026 terralytica GmbH. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
