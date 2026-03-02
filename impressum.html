@@ -1,37 +1,53 @@
+<!-- impressum.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Impressum – terralytica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum | terralytica</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+  </style>
 </head>
-<body class="bg-[#fbfcf4]">
 
-  <!-- ========== HEADER ========== -->
+<body class="bg-[#fbfcf4]">
+  <!-- HEADER (wie index) -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <a href="index.html" class="flex items-center">
           <img src="logo.png" alt="terralytica" class="h-20 sm:h-24 md:h-28"
-               onerror="this.style.display='none';this.nextSibling.style.display='inline'"
-          /><span style="display:none;font-size:2rem;font-weight:700;color:#523B2A;">terralytica</span>
+               onerror="this.style.display='none'; this.nextSibling.style.display='inline';" />
+          <span style="display:none; font-size:2rem; font-weight:700; color:#523B2A;">terralytica</span>
         </a>
-        <a href="index.html"
-           class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">
-          ← Zurück zur Homepage
-        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
+          <a href="index.html#about" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
+          <a href="index.html#contact" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
+        </div>
+
+        <button class="md:hidden text-[#523B2A]" onclick="toggleMenu()" aria-label="Menü öffnen">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden pb-4 flex flex-col space-y-3">
+        <a href="index.html#services" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Services</a>
+        <a href="index.html#about" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
+        <a href="index.html#contact" onclick="toggleMenu()" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg text-center">Kontakt</a>
       </div>
     </nav>
   </header>
 
-  <!-- ========== IMPRESSUM INHALT ========== -->
+  <!-- INHALT -->
   <main class="pt-32 pb-20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-
       <h1 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-10">Impressum</h1>
 
-      <!-- Angaben gem. § 5 DDG -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Angaben gemäß § 5 DDG</h2>
         <p class="text-[#7B6653]">terralytica GmbH</p>
@@ -40,92 +56,39 @@
         <p class="text-[#7B6653]">Deutschland</p>
       </section>
 
-      <!-- Vertreten durch -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Vertreten durch</h2>
         <p class="text-[#7B6653]">Geschäftsführer: Julius Mayer</p>
       </section>
 
-      <!-- Kontakt -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Kontakt</h2>
         <p class="text-[#7B6653]">
-          E-Mail: <a href="mailto:info@terralytica.de"
-            class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
+          E-Mail:
+          <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
         </p>
         <p class="text-[#7B6653] mt-1">
-          Kontaktformular: <a href="index.html#contact"
-            class="text-[#523B2A] hover:text-[#7B6653] underline">Zum Kontaktformular</a>
+          Kontaktformular:
+          <a href="index.html#contact" class="text-[#523B2A] hover:text-[#7B6653] underline">Zum Kontaktformular</a>
         </p>
       </section>
 
-      <!-- Handelsregister -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Handelsregister</h2>
         <p class="text-[#7B6653]">Registergericht: Amtsgericht Nürnberg</p>
         <p class="text-[#7B6653]">Registernummer: HRB 45650</p>
       </section>
 
-      <!-- EU-Streitschlichtung (Pflicht) -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">EU-Streitschlichtung</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Verbraucherstreitbeilegung</h2>
         <p class="text-[#7B6653]">
-          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener"
-             class="text-[#523B2A] hover:text-[#7B6653] underline">
-            https://ec.europa.eu/consumers/odr/
-          </a>
-        </p>
-        <p class="text-[#7B6653] mt-2">
-          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-          Verbraucherschlichtungsstelle teilzunehmen.
+          Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind hierzu auch nicht verpflichtet.
         </p>
       </section>
-
-      <!-- Haftung für Inhalte -->
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Haftung für Inhalte</h2>
-        <p class="text-[#7B6653]">
-          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den
-          allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht
-          verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
-          zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder
-          Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
-          Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
-          Rechtsverletzung möglich.
-        </p>
-      </section>
-
-      <!-- Haftung für Links -->
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Haftung für Links</h2>
-        <p class="text-[#7B6653]">
-          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-          Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-          verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
-          verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
-          Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
-          inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
-          Rechtsverletzung nicht zumutbar.
-        </p>
-      </section>
-
-      <!-- Urheberrecht -->
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Urheberrecht</h2>
-        <p class="text-[#7B6653]">
-          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
-          deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
-          außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen
-          Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht
-          kommerziellen Gebrauch gestattet.
-        </p>
-      </section>
-
     </div>
   </main>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER (wie index) -->
   <footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
@@ -135,26 +98,10 @@
             Der Partner für professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen.
           </p>
         </div>
+
         <div class="flex flex-col sm:items-center sm:text-center">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
           <div class="space-y-2 text-[#fbfcf4]/80">
             <p>E-Mail: info@terralytica.de</p>
-            <p>Pfaffenholz 2<br/>91126 Kammerstein<br/>Deutschland</p>
-          </div>
-        </div>
-        <div class="sm:text-right">
-          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
-          <div class="space-y-2">
-            <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
-            <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
-          </div>
-        </div>
-      </div>
-      <div class="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
-        <p>&copy; 2026 terralytica GmbH. Alle Rechte vorbehalten.</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+            <p>Pfaffenholz 2<br>91126 Kammerstein<br>Deutschland</p>
+          </di
