@@ -1,4 +1,3 @@
-<!-- impressum.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -14,7 +13,8 @@
 </head>
 
 <body class="bg-[#fbfcf4]">
-  <!-- HEADER (wie index) -->
+
+  <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
@@ -23,27 +23,24 @@
                onerror="this.style.display='none'; this.nextSibling.style.display='inline';" />
           <span style="display:none; font-size:2rem; font-weight:700; color:#523B2A;">terralytica</span>
         </a>
-
         <div class="hidden md:flex items-center space-x-8">
           <a href="index.html#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
-          <a href="index.html#about" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
-          <a href="index.html#contact" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
+          <a href="index.html#about"    class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
+          <a href="index.html#contact"  class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
         </div>
-
         <button class="md:hidden text-[#523B2A]" onclick="toggleMenu()" aria-label="Menü öffnen">
           <i data-lucide="menu" class="w-7 h-7"></i>
         </button>
       </div>
-
       <div id="mobileMenu" class="hidden md:hidden pb-4 flex flex-col space-y-3">
         <a href="index.html#services" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Services</a>
-        <a href="index.html#about" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
-        <a href="index.html#contact" onclick="toggleMenu()" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg text-center">Kontakt</a>
+        <a href="index.html#about"    onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
+        <a href="index.html#contact"  onclick="toggleMenu()" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg text-center">Kontakt</a>
       </div>
     </nav>
   </header>
 
-  <!-- INHALT -->
+  <!-- IMPRESSUM INHALT -->
   <main class="pt-32 pb-20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-10">Impressum</h1>
@@ -64,12 +61,10 @@
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Kontakt</h2>
         <p class="text-[#7B6653]">
-          E-Mail:
-          <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
+          E-Mail: <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
         </p>
         <p class="text-[#7B6653] mt-1">
-          Kontaktformular:
-          <a href="index.html#contact" class="text-[#523B2A] hover:text-[#7B6653] underline">Zum Kontaktformular</a>
+          Kontaktformular: <a href="index.html#contact" class="text-[#523B2A] hover:text-[#7B6653] underline">Zum Kontaktformular</a>
         </p>
       </section>
 
@@ -79,29 +74,57 @@
         <p class="text-[#7B6653]">Registernummer: HRB 45650</p>
       </section>
 
+      <!-- USt-IdNr. einfügen sobald vorhanden:
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Umsatzsteuer-ID</h2>
+        <p class="text-[#7B6653]">Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE___</p>
+      </section>
+      -->
+
       <section class="mb-8">
         <h2 class="text-xl font-semibold text-[#523B2A] mb-3">Verbraucherstreitbeilegung</h2>
         <p class="text-[#7B6653]">
-          Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind hierzu auch nicht verpflichtet.
+          Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil
+          und sind hierzu auch nicht verpflichtet.
         </p>
       </section>
     </div>
   </main>
 
-  <!-- FOOTER (wie index) -->
+  <!-- FOOTER -->
   <footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
         <div>
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">terralytica</h3>
-          <p class="text-[#fbfcf4]/80">
-            Der Partner für professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen.
-          </p>
+          <p class="text-[#fbfcf4]/80">Der Partner für professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen.</p>
         </div>
-
         <div class="flex flex-col sm:items-center sm:text-center">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
           <div class="space-y-2 text-[#fbfcf4]/80">
-            <p>E-Mail: info@terralytica.de</p>
+            <p>E-Mail: <a href="mailto:info@terralytica.de" class="hover:text-[#fbfcf4]">info@terralytica.de</a></p>
             <p>Pfaffenholz 2<br>91126 Kammerstein<br>Deutschland</p>
-          </di
+          </div>
+        </div>
+        <div class="sm:text-right">
+          <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
+          <div class="space-y-2">
+            <a href="impressum.html"  aria-current="page" class="block text-[#fbfcf4] font-semibold transition-colors">Impressum</a>
+            <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-[#7B6653] pt-8 text-center text-[#fbfcf4]/70">
+        <p>&copy; 2026 terralytica GmbH. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
