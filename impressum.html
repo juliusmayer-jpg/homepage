@@ -12,32 +12,15 @@
     gtag('consent', 'default', { 'analytics_storage': 'denied' });
   </script>
 
-  <!-- 2. Google Analytics -->
+  <!-- 2. Cookiebot -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a" data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- 3. Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-CFSEYW9VVK');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
-
-  <!-- 3. Klaro -->
-  <script>
-    var klaroConfig = {
-      version: 1,
-      acceptAll: true,
-      lang: 'de',
-      services: [
-        {
-          name: 'google-analytics',
-          title: 'Google Analytics',
-          purposes: ['analytics'],
-          cookies: [/^_ga/, /^_gid/],
-          onAccept: `gtag('consent', 'update', { 'analytics_storage': 'granted' });`,
-          onDecline: `gtag('consent', 'update', { 'analytics_storage': 'denied' });`
-        }
-      ]
-    };
-  </script>
-  <script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js" data-config="klaroConfig"></script>
 
   <!-- 4. Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -145,7 +128,7 @@
         <div class="sm:text-right">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
           <div class="space-y-2">
-            <a href="impressum.html"   aria-current="page" class="block text-[#fbfcf4] font-semibold transition-colors">Impressum</a>
+            <a href="impressum.html" aria-current="page" class="block text-[#fbfcf4] font-semibold transition-colors">Impressum</a>
             <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
           </div>
         </div>
