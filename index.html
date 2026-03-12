@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>terralytica – Gutachten für Solaranlagen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung | terralytica</title>
 
   <!-- 1. Consent Default -->
   <script>
@@ -12,32 +12,15 @@
     gtag('consent', 'default', { 'analytics_storage': 'denied' });
   </script>
 
-  <!-- 2. Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- 2. Cookiebot -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a" data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- 3. Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFSEYW9VVK"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-CFSEYW9VVK');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
-
-  <!-- 3. Klaro -->
-  <script>
-    var klaroConfig = {
-      version: 1,
-      acceptAll: true,
-      lang: 'de',
-      services: [
-        {
-          name: 'google-analytics',
-          title: 'Google Analytics',
-          purposes: ['analytics'],
-          cookies: [/^_ga/, /^_gid/],
-          onAccept: `gtag('consent', 'update', { 'analytics_storage': 'granted' });`,
-          onDecline: `gtag('consent', 'update', { 'analytics_storage': 'denied' });`
-        }
-      ]
-    };
-  </script>
-  <script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js" data-config="klaroConfig"></script>
 
   <!-- 4. Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -47,239 +30,223 @@
     body { overflow-x: hidden; }
   </style>
 </head>
+
 <body class="bg-[#fbfcf4]">
 
   <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16 sm:h-20">
-        <a href="#hero" class="flex items-center">
-          <img src="logo.png" alt="terralytica" class="h-12 sm:h-16 md:h-20 max-w-[160px] object-contain"
-               onerror="this.style.display='none';this.nextSibling.style.display='inline'"
-          /><span style="display:none;" class="text-2xl font-bold text-[#523B2A]">terralytica</span>
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="logo.png" alt="terralytica" class="h-20 sm:h-24 md:h-28"
+               onerror="this.style.display='none'; this.nextSibling.style.display='inline';" />
+          <span style="display:none; font-size:2rem; font-weight:700; color:#523B2A;">terralytica</span>
         </a>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
-          <a href="#about"    class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
-          <a href="#contact"  class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
+          <a href="index.html#services" class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Services</a>
+          <a href="index.html#about"    class="text-[#523B2A] hover:text-[#7B6653] transition-colors">Über uns</a>
+          <a href="index.html#contact"  class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg hover:bg-[#7B6653] transition-colors">Kontakt</a>
         </div>
-        <button class="md:hidden text-[#523B2A]" onclick="toggleMenu()">
+        <button class="md:hidden text-[#523B2A]" onclick="toggleMenu()" aria-label="Menü öffnen">
           <i data-lucide="menu" class="w-7 h-7"></i>
         </button>
       </div>
       <div id="mobileMenu" class="hidden md:hidden pb-4 flex flex-col space-y-3">
-        <a href="#services" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Services</a>
-        <a href="#about"    onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
-        <a href="#contact"  onclick="toggleMenu()" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg text-center">Kontakt</a>
+        <a href="index.html#services" onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Services</a>
+        <a href="index.html#about"    onclick="toggleMenu()" class="text-[#523B2A] hover:text-[#7B6653]">Über uns</a>
+        <a href="index.html#contact"  onclick="toggleMenu()" class="px-6 py-2 bg-[#523B2A] text-[#fbfcf4] rounded-lg text-center">Kontakt</a>
       </div>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="hero" class="flex flex-col xl:flex-row min-h-screen pt-16 sm:pt-20 overflow-hidden">
-    <div class="w-full xl:w-1/2 bg-gradient-to-br from-[#523B2A] to-[#7B6653] flex items-center">
-      <div class="px-6 sm:px-12 lg:px-16 py-16 text-[#EEF0EB] max-w-2xl text-center mx-auto w-full">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Professionelle Gutachten für Ihr PV-Projekt auf landwirtschaftlichen Flächen
-        </h1>
-        <p class="text-base sm:text-lg text-[#EEF0EB]/85 mb-10">
-          terralytica begleitet Sie von der ersten Erkundung bis zur erfolgreichen Umsetzung Ihres Solarprojekts mit präzisen, verlässlichen Gutachten.
+  <!-- DATENSCHUTZ INHALT -->
+  <main class="pt-32 pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-2">Datenschutzerklärung</h1>
+      <p class="text-[#7B6653] mb-10">Stand: März 2026</p>
+
+      <!-- 1. Verantwortlicher -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">1. Verantwortlicher (Art. 13 Abs. 1 DSGVO)</h2>
+        <p class="text-[#7B6653]">terralytica GmbH</p>
+        <p class="text-[#7B6653]">Pfaffenholz 2, 91126 Kammerstein, Deutschland</p>
+        <p class="text-[#7B6653]">Geschäftsführer: Julius Mayer</p>
+        <p class="text-[#7B6653] mt-2">
+          E-Mail: <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
         </p>
-        <a href="#contact" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-[#fbfcf4] text-[#523B2A] rounded-lg font-semibold hover:bg-[#fbfcf4]/90 transition-colors">
-          Jetzt Kontakt aufnehmen
-          <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </a>
-      </div>
-    </div>
-    <div class="hidden lg:block lg:w-1/2">
-      <img
-        src="header.png"
-        alt="Solaranlage auf landwirtschaftlicher Fläche"
-        class="w-full h-full object-cover"
-        onerror="this.style.background='#8B9E82'"
-      />
-    </div>
-  </section>
+      </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-4">Unsere Leistungen</h2>
-        <p class="text-lg text-[#7B6653] max-w-2xl mx-auto">
-          Wir bieten umfassende Gutachten für alle Aspekte Ihres Solarprojekts auf landwirtschaftlichen Flächen.
+      <!-- 2. Allgemeine Hinweise -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+        <p class="text-[#7B6653]">
+          Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber,
+          welche personenbezogenen Daten wir erheben, wie wir diese verwenden und welche Rechte Sie diesbezüglich haben.
+          Die Verarbeitung Ihrer personenbezogenen Daten erfolgt gemäß der Datenschutz-Grundverordnung (DSGVO) sowie dem Bundesdatenschutzgesetz (BDSG).
         </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      </section>
 
-        <!-- Vorerkundung -->
-        <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
-          <div class="flex flex-col items-center text-center mb-6">
-            <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
-              <i data-lucide="map" class="w-8 h-8 text-[#523B2A]"></i>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Vorerkundung</h3>
-            <p class="text-[#7B6653]">Präzise Standortanalyse als Fundament Ihres PV-Projekts. Wir erfassen die topografischen Gegebenheiten Ihres Feldes, identifizieren Risiken im Baugrund und schaffen die entscheidende <strong>Planungsgrundlage</strong> für eine effiziente und <strong>sichere Projektentwicklung</strong> auf Ihren landwirtschaftlichen Flächen.</p>
-          </div>
-          <ul class="space-y-3 flex-grow">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Topografische Geländeaufnahme & Vermessung der PV-Projektfläche inkl. Höhenlinienplan</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Bodenradar (GPR), Thermografie & Leitungsortung zur Erkennung unterirdischer Unregelmäßigkeiten</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Früherkennung von Risiken & Hindernissen im Projektgelände zur Vermeidung von Bauverzögerungen</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Belastbare Datengrundlage für Planung, Genehmigung & Errichtung Ihres Solarprojekts</span></li>
-          </ul>
-        </div>
-
-        <!-- Bodengutachten -->
-        <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
-          <div class="flex flex-col items-center text-center mb-6">
-            <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
-              <i data-lucide="flask-conical" class="w-8 h-8 text-[#523B2A]"></i>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Bodengutachten</h3>
-            <p class="text-[#7B6653]">Fundierte Analyse von Tragfähigkeit, Bodenstruktur und chemischen Eigenschaften Ihrer Fläche. Wir liefern <strong>statische und chemische Bodengutachten</strong>, die eine sichere Fundamentplanung, optimale Rammpfahlauslegung und Einbindetiefen für Ihre Photovoltaikanlage gewährleisten.</p>
-          </div>
-          <ul class="space-y-3 flex-grow">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Bodentragfähigkeit, Auszugskräfte & Rammpfahleignung für die Errichtung von PV-Anlagen</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Chemische Bodenanalyse für eine sichere Projektrealisierung (z.B. Leitfähigkeit des Bodens)</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Bodenklassifizierung, Schichtprofil & geotechnische Bewertung des gesamten Baugrunds</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Normkonforme Fundamentplanung & Gründungsempfehlung speziell für Agri-PV-Anlagen</span></li>
-          </ul>
-        </div>
-
-        <!-- Umweltplanung & Artenschutzrecht -->
-        <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
-          <div class="flex flex-col items-center text-center mb-6">
-            <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
-              <i data-lucide="leaf" class="w-8 h-8 text-[#523B2A]"></i>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Umweltplanung & Artenschutzrecht</h3>
-            <p class="text-[#7B6653]">Umfassende naturschutzfachliche Begutachtung, von der initialen <strong>Relevanzprüfung</strong> bis zur Entwicklung maßgeschneiderter, behördenkonformer Lösungen. Wir begleiten Ihr Projekt durch alle Phasen der <strong>Eingriffsregelung</strong> und sichern die rechtliche Genehmigungsfähigkeit.</p>
-          </div>
-          <ul class="space-y-3 flex-grow">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Faunistische Bestandserfassung, Biotopkartierung & Spezielle artenschutzrechtliche Prüfung (saP/AFB)</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Landschaftspflegerischer Begleitplan (LBP), Umweltberichte & FFH-Verträglichkeitsprüfung</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Eingriffsregelung, Kompensationsplanung & Vorgezogene Ausgleichsmaßnahmen (CEF-Maßnahmen)</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Ökologische Baubegleitung (ÖBB) & Umweltbaubegleitung (UBB) während der gesamten Bauphase</span></li>
-          </ul>
-        </div>
-
-        <!-- Kampfmittelgutachten -->
-        <div class="bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8 hover:shadow-xl transition-shadow flex flex-col">
-          <div class="flex flex-col items-center text-center mb-6">
-            <div class="w-16 h-16 bg-[#8B9E82]/20 rounded-xl flex items-center justify-center mb-4">
-              <i data-lucide="shield" class="w-8 h-8 text-[#523B2A]"></i>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-[#523B2A] mb-3">Kampfmittelgutachten</h3>
-            <p class="text-[#7B6653]">Systematische Bewertung potenzieller Kampfmittelbelastungen durch <strong>historische Recherche</strong> und Luftbildauswertung. Wir helfen Ihnen, potenzielle Gefahren aus Kriegszeiten zu erfassen und schaffen somit die Grundlage für einen <strong>sicheren Baubeginn</strong> und einen Bau auf Ihrer PV-Projektfläche ohne Überraschungen durch unentdeckte Kampfmittel.</p>
-          </div>
-          <ul class="space-y-3 flex-grow">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Historische Recherche & Auswertung kriegsrelevanter Unterlagen zur Gefährdungsabschätzung</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Detaillierte Luftbildauswertung & Analyse potenzieller Kampfmittelverdachtsflächen</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Risikobewertung & Einstufung der Kampfmittelwahrscheinlichkeit im Baufeld</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653]">Erstellung von Gutachten, die für die Sicherheit Ihrer Mitarbeiter eminent ist</span></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
-        <div id="aboutImgWrap">
-          <img
-            src="agri-pv.jpg"
-            alt="Agri-PV Solar Installation"
-            id="aboutImg"
-            class="w-full rounded-lg shadow-lg object-cover"
-            onerror="this.style.background='#8B9E82';this.style.minHeight='300px'"
-          />
-        </div>
-
-        <div id="aboutLeft">
-          <h2 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-6">Warum terralytica?</h2>
-          <p class="text-base text-[#7B6653] mb-6">
-            Mit unserer Expertise und langjährigen Erfahrung sind wir Ihr verlässlicher Partner für die erfolgreiche Realisierung von Solaranlagen auf landwirtschaftlichen Flächen.
-          </p>
-          <p class="text-base text-[#7B6653] mb-8">
-            terralytica wurde mit der Vision gegründet, die Realisierung von Solaranlagen auf landwirtschaftlichen Flächen durch präzise, umfassende Gutachten zu unterstützen. Wir verstehen die besonderen Anforderungen, die diese Projekte mit sich bringen.
-          </p>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Spezialisierte Expertise in landwirtschaftlichen Solarprojekten</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Schnelle und präzise Gutachtenerstellung</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Ganzheitliche Beratung von der Vorerkundung bis zur Gutachtenübergabe</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Nachhaltige und naturverträgliche Lösungsansätze</span></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-4">Kontaktieren Sie uns</h2>
-        <p class="text-lg text-[#7B6653] max-w-2xl mx-auto">
-          Haben Sie Fragen zu unseren Services oder möchten Sie ein Projekt besprechen? Wir freuen uns auf Ihre Nachricht.
+      <!-- 3. Hosting -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">3. Hosting (GitHub Pages)</h2>
+        <p class="text-[#7B6653]">
+          Diese Website wird auf Servern von <strong>GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</strong>
+          gehostet (GitHub Pages). Beim Aufruf unserer Website werden automatisch sogenannte Server-Logfiles erhoben, die Ihr Browser übermittelt.
+          Dazu gehören: IP-Adresse, Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname und Uhrzeit der Anfrage.
         </p>
-      </div>
-      <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg border border-[#523B2A]/10 p-8">
-        <h3 class="text-2xl font-semibold text-[#523B2A] mb-6">Nachricht senden</h3>
-        <form action="https://formspree.io/f/mdalyzgg" method="POST" class="space-y-6">
-          <div>
-            <label for="name" class="block text-[#523B2A] mb-2 font-medium">Name *</label>
-            <input type="text" id="name" name="name" required
-              class="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
-              placeholder="Ihr Name" />
-          </div>
-          <div>
-            <label for="email" class="block text-[#523B2A] mb-2 font-medium">E-Mail *</label>
-            <input type="email" id="email" name="email" required
-              class="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
-              placeholder="ihre.email@beispiel.de" />
-          </div>
-          <div>
-            <label for="service" class="block text-[#523B2A] mb-2 font-medium">Interessierter Service</label>
-            <select id="service" name="service"
-              class="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]">
-              <option value="">Bitte wählen...</option>
-              <option value="survey">Vorerkundung</option>
-              <option value="soil">Bodengutachten</option>
-              <option value="nature">Umweltplanung & Artenschutzrecht</option>
-              <option value="munitions">Kampfmittelgutachten</option>
-              <option value="multiple">Mehrere Services</option>
-            </select>
-          </div>
-          <div>
-            <label for="message" class="block text-[#523B2A] mb-2 font-medium">Nachricht *</label>
-            <textarea id="message" name="message" required rows="6"
-              class="w-full px-4 py-3 border border-[#523B2A]/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B9E82] bg-white text-[#523B2A]"
-              placeholder="Beschreiben Sie Ihr Anliegen..."></textarea>
-          </div>
-          <div>
-            <label class="flex items-start gap-3 cursor-pointer">
-              <input type="checkbox" name="datenschutz" required class="mt-1 accent-[#523B2A]" />
-              <span class="text-sm text-[#7B6653]">
-                Ich habe die
-                <a href="datenschutz.html" class="text-[#523B2A] underline hover:text-[#7B6653]">Datenschutzerklärung</a>
-                gelesen und stimme der Verarbeitung meiner Daten zu. *
-              </span>
-            </label>
-          </div>
-          <button type="submit"
-            class="w-full bg-[#523B2A] text-[#EEF0EB] py-3 px-6 rounded-lg font-semibold hover:bg-[#7B6653] transition-colors">
-            Nachricht senden
-          </button>
-          <p class="text-sm text-[#7B6653]">* Pflichtfelder</p>
-        </form>
-      </div>
+        <p class="text-[#7B6653] mt-2">
+          Diese Daten werden von GitHub erhoben und können in die USA übermittelt werden.
+          GitHub ist gemäß dem EU-US Data Privacy Framework zertifiziert.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website).
+          Weitere Informationen:
+          <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
+             target="_blank" rel="noopener" class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von GitHub</a>.
+        </p>
+      </section>
+
+      <!-- 4. Kontaktformular -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">4. Kontaktformular (Formspree)</h2>
+        <p class="text-[#7B6653]">
+          Für die Verarbeitung von Kontaktanfragen nutzen wir den Dienst <strong>Formspree</strong>
+          (Formspree, Inc., 2261 Market Street #5196, San Francisco, CA 94114, USA).
+          Wenn Sie unser Kontaktformular nutzen, werden Ihre Angaben (Name, E-Mail-Adresse, gewählter Service, Nachricht)
+          an Formspree übermittelt und von dort an
+          <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a> weitergeleitet.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Zweck:</strong> Bearbeitung Ihrer Kontaktanfrage.<br />
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (vorvertraglich/vertraglich) bzw.
+          Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation mit Interessenten).<br />
+          <strong>Speicherdauer:</strong> Löschung nach abschließender Bearbeitung, spätestens nach 6 Monaten.<br />
+          <strong>Drittlandübermittlung:</strong> Formspree verarbeitet Daten in den USA (Absicherung über SCCs).
+          Weitere Informationen:
+          <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von Formspree</a>.
+        </p>
+      </section>
+
+      <!-- 5. Google Analytics -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">5. Webanalyse (Google Analytics)</h2>
+        <p class="text-[#7B6653]">
+          Wir nutzen Google Analytics 4, einen Webanalysedienst der <strong>Google Ireland Limited, Gordon House,
+          Barrow Street, Dublin 4, Irland</strong>. Google Analytics verwendet Cookies, die eine Analyse der Benutzung
+          unserer Website ermöglichen. Die durch die Cookies erzeugten Informationen werden in der Regel an einen
+          Server von Google in den USA übertragen und dort gespeichert.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Zweck:</strong> Analyse des Nutzerverhaltens zur Verbesserung unseres Webangebots.<br />
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Die Verarbeitung erfolgt
+          ausschließlich nach Ihrer ausdrücklichen Zustimmung über unser Cookie-Einwilligungsbanner.<br />
+          <strong>Cookies:</strong> _ga (Speicherdauer: 2 Jahre), _gid (Speicherdauer: 24 Stunden).<br />
+          <strong>Drittlandübermittlung:</strong> USA, abgesichert über EU-Standardvertragsklauseln (SCCs).<br />
+          <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit über unser Cookie-Banner widerrufen.<br />
+          Weitere Informationen:
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von Google</a>.
+        </p>
+      </section>
+
+      <!-- 6. Cookie-Consent (Cookiebot) -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">6. Cookie-Einwilligungsverwaltung (Cookiebot)</h2>
+        <p class="text-[#7B6653]">
+          Für die Verwaltung von Cookie-Einwilligungen nutzen wir den Dienst <strong>Cookiebot</strong>
+          (Cybot A/S, Havnegade 39, 1058 Kopenhagen, Dänemark). Cookiebot speichert Ihre Cookie-Einwilligung
+          im LocalStorage Ihres Browsers, um Ihre Präferenzen zu merken.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung zur Einwilligungsdokumentation).<br />
+          Weitere Informationen:
+          <a href="https://www.cookiebot.com/de/privacy-policy/" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von Cookiebot</a>.
+        </p>
+      </section>
+
+      <!-- 7. E-Mail -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">7. Kontaktaufnahme per E-Mail</h2>
+        <p class="text-[#7B6653]">
+          Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten
+          zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.
+          Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
+      </section>
+
+      <!-- 8. Cookies -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">8. Cookies</h2>
+        <p class="text-[#7B6653]">
+          Diese Website verwendet <strong>keine eigenen Tracking-Cookies</strong> ohne Ihre Einwilligung.
+          Google Analytics-Cookies werden erst nach Ihrer ausdrücklichen Zustimmung über unser Cookie-Banner gesetzt.
+          Technisch bedingte Cookies durch den Hostinganbieter sind nicht ausgeschlossen; Details siehe Datenschutzerklärung von GitHub.
+        </p>
+      </section>
+
+      <!-- 9. SSL -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">9. SSL-Verschlüsselung</h2>
+        <p class="text-[#7B6653]">
+          Diese Website nutzt aus Sicherheitsgründen eine SSL/TLS-Verschlüsselung.
+          Eine verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile und dem Schloss-Symbol im Browser.
+        </p>
+      </section>
+
+      <!-- 10. Betroffenenrechte -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">10. Ihre Rechte (Art. 15–22 DSGVO)</h2>
+        <p class="text-[#7B6653] mb-3">Sie haben folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+        <ul class="text-[#7B6653] space-y-2 list-none">
+          <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
+          <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO)</li>
+          <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO)</li>
+          <li><strong>Recht auf Einschränkung</strong> (Art. 18 DSGVO)</li>
+          <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+          <li><strong>Widerspruchsrecht</strong> (Art. 21 DSGVO)</li>
+        </ul>
+        <p class="text-[#7B6653] mt-3">
+          Zur Ausübung Ihrer Rechte:
+          <a href="mailto:info@terralytica.de" class="text-[#523B2A] hover:text-[#7B6653] underline">info@terralytica.de</a>
+        </p>
+      </section>
+
+      <!-- 11. Aufsichtsbehörde -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">11. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <p class="text-[#7B6653]">
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
+          Zuständige Behörde für Bayern:
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong><br />
+          Promenade 18, 91522 Ansbach<br />
+          E-Mail: <a href="mailto:poststelle@lda.bayern.de" class="text-[#523B2A] hover:text-[#7B6653] underline">poststelle@lda.bayern.de</a><br />
+          Web: <a href="https://www.lda.bayern.de/" target="_blank" rel="noopener"
+                  class="text-[#523B2A] hover:text-[#7B6653] underline">www.lda.bayern.de</a>
+        </p>
+      </section>
+
+      <!-- 12. Keine automatisierte Entscheidungsfindung -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">12. Automatisierte Entscheidungsfindung</h2>
+        <p class="text-[#7B6653]">
+          Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt.
+        </p>
+      </section>
+
+      <!-- 13. Pflicht zur Bereitstellung -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">13. Pflicht zur Bereitstellung der Daten</h2>
+        <p class="text-[#7B6653]">
+          Die Bereitstellung personenbezogener Daten ist grundsätzlich freiwillig.
+          Für die Bearbeitung von Kontaktanfragen sind jedoch bestimmte Angaben (z. B. eine gültige E-Mail-Adresse)
+          erforderlich – ohne diese können wir Ihre Anfrage nicht beantworten.
+        </p>
+      </section>
     </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="bg-[#523B2A] text-[#fbfcf4] py-12">
@@ -292,15 +259,15 @@
         <div class="flex flex-col sm:items-center sm:text-center">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Kontakt</h3>
           <div class="space-y-2 text-[#fbfcf4]/80">
-            <p>E-Mail: info@terralytica.de</p>
-            <p>Pfaffenholz 2<br/>91126 Kammerstein<br/>Deutschland</p>
+            <p>E-Mail: <a href="mailto:info@terralytica.de" class="hover:text-[#fbfcf4]">info@terralytica.de</a></p>
+            <p>Pfaffenholz 2<br>91126 Kammerstein<br>Deutschland</p>
           </div>
         </div>
         <div class="sm:text-right">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
           <div class="space-y-2">
-            <a href="impressum.html"   class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
-            <a href="datenschutz.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Datenschutz</a>
+            <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
+            <a href="datenschutz.html" aria-current="page" class="block text-[#fbfcf4] font-semibold transition-colors">Datenschutz</a>
           </div>
         </div>
       </div>
@@ -313,20 +280,8 @@
   <script>
     lucide.createIcons();
     function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
+      document.getElementById("mobileMenu").classList.toggle("hidden");
     }
-    function matchImageHeight() {
-      const left = document.getElementById('aboutLeft');
-      const img  = document.getElementById('aboutImg');
-      if (window.innerWidth >= 1024 && left && img) {
-        img.style.height = left.offsetHeight + 'px';
-      } else {
-        img.style.height = 'auto';
-      }
-    }
-    window.addEventListener('load', matchImageHeight);
-    window.addEventListener('resize', matchImageHeight);
   </script>
-
 </body>
 </html>
