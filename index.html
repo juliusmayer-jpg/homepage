@@ -6,20 +6,28 @@
   <title>terralytica – Gutachten für Solaranlagen</title>
 
   <!-- 1. Consent Default -->
-  <script>
+  <script data-cookieconsent="ignore">
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag('consent', 'default', { 'analytics_storage': 'denied' });
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
   </script>
 
   <!-- 2. Cookiebot -->
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+    data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a"
+    data-blockingmode="auto" type="text/javascript"></script>
 
   <!-- 3. Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFSEYW9VVK"></script>
+  <script data-cookieconsent="ignore">
     gtag('js', new Date());
-    gtag('config', 'G-CFSEYW9VVK');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
   <!-- 4. Tailwind + Lucide -->
@@ -31,6 +39,7 @@
   </style>
 </head>
 <body class="bg-[#fbfcf4]">
+  <style>body { background-color: #fbfcf4 !important; }</style>
 
   <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
