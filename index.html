@@ -5,32 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>terralytica – Gutachten für Solaranlagen</title>
 
-  <!-- 1. Consent Default -->
-  <script data-cookieconsent="ignore">
+  <!-- 1. Cookiebot -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+    data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a" type="text/javascript"></script>
+
+  <!-- 2. Google Analytics (blockiert bis Zustimmung) -->
+  <script type="text/plain" data-cookieconsent="statistics"
+    async src="https://www.googletagmanager.com/gtag/js?id=G-CFSEYW9VVK"></script>
+  <script type="text/plain" data-cookieconsent="statistics">
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'wait_for_update': 500
-    });
-  </script>
-
-  <!-- 2. Cookiebot -->
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
-    data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a"
-    data-blockingmode="auto" type="text/javascript"></script>
-
-  <!-- 3. Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFSEYW9VVK"></script>
-  <script data-cookieconsent="ignore">
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- 4. Tailwind + Lucide -->
+  <!-- 3. Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
@@ -39,7 +28,6 @@
   </style>
 </head>
 <body class="bg-[#fbfcf4]">
-  <style>body { background-color: #fbfcf4 !important; }</style>
 
   <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbfcf4]/95 backdrop-blur-sm border-b border-[#523B2A]/10">
