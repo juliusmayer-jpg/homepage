@@ -12,32 +12,15 @@
     gtag('consent', 'default', { 'analytics_storage': 'denied' });
   </script>
 
-  <!-- 2. Google Analytics -->
+  <!-- 2. Cookiebot -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1fce82da-7fd3-47ee-a226-95083cd2682a" data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- 3. Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-CFSEYW9VVK');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
-
-  <!-- 3. Klaro -->
-  <script>
-    var klaroConfig = {
-      version: 1,
-      acceptAll: true,
-      lang: 'de',
-      services: [
-        {
-          name: 'google-analytics',
-          title: 'Google Analytics',
-          purposes: ['analytics'],
-          cookies: [/^_ga/, /^_gid/],
-          onAccept: `gtag('consent', 'update', { 'analytics_storage': 'granted' });`,
-          onDecline: `gtag('consent', 'update', { 'analytics_storage': 'denied' });`
-        }
-      ]
-    };
-  </script>
-  <script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js" data-config="klaroConfig"></script>
 
   <!-- 4. Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -165,9 +148,25 @@
         </p>
       </section>
 
-      <!-- 6. E-Mail -->
+      <!-- 6. Cookie-Consent (Cookiebot) -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">6. Kontaktaufnahme per E-Mail</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">6. Cookie-Einwilligungsverwaltung (Cookiebot)</h2>
+        <p class="text-[#7B6653]">
+          Für die Verwaltung von Cookie-Einwilligungen nutzen wir den Dienst <strong>Cookiebot</strong>
+          (Cybot A/S, Havnegade 39, 1058 Kopenhagen, Dänemark). Cookiebot speichert Ihre Cookie-Einwilligung
+          im LocalStorage Ihres Browsers, um Ihre Präferenzen zu merken.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung zur Einwilligungsdokumentation).<br />
+          Weitere Informationen:
+          <a href="https://www.cookiebot.com/de/privacy-policy/" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von Cookiebot</a>.
+        </p>
+      </section>
+
+      <!-- 7. E-Mail -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">7. Kontaktaufnahme per E-Mail</h2>
         <p class="text-[#7B6653]">
           Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten
           zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.
@@ -176,9 +175,9 @@
         </p>
       </section>
 
-      <!-- 7. Cookies -->
+      <!-- 8. Cookies -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">7. Cookies</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">8. Cookies</h2>
         <p class="text-[#7B6653]">
           Diese Website verwendet <strong>keine eigenen Tracking-Cookies</strong> ohne Ihre Einwilligung.
           Google Analytics-Cookies werden erst nach Ihrer ausdrücklichen Zustimmung über unser Cookie-Banner gesetzt.
@@ -186,18 +185,18 @@
         </p>
       </section>
 
-      <!-- 8. SSL -->
+      <!-- 9. SSL -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">8. SSL-Verschlüsselung</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">9. SSL-Verschlüsselung</h2>
         <p class="text-[#7B6653]">
           Diese Website nutzt aus Sicherheitsgründen eine SSL/TLS-Verschlüsselung.
           Eine verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile und dem Schloss-Symbol im Browser.
         </p>
       </section>
 
-      <!-- 9. Betroffenenrechte -->
+      <!-- 10. Betroffenenrechte -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">9. Ihre Rechte (Art. 15–22 DSGVO)</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">10. Ihre Rechte (Art. 15–22 DSGVO)</h2>
         <p class="text-[#7B6653] mb-3">Sie haben folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
         <ul class="text-[#7B6653] space-y-2 list-none">
           <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
@@ -213,9 +212,9 @@
         </p>
       </section>
 
-      <!-- 10. Aufsichtsbehörde -->
+      <!-- 11. Aufsichtsbehörde -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">10. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">11. Beschwerderecht bei der Aufsichtsbehörde</h2>
         <p class="text-[#7B6653]">
           Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
           Zuständige Behörde für Bayern:
@@ -229,17 +228,17 @@
         </p>
       </section>
 
-      <!-- 11. Keine automatisierte Entscheidungsfindung -->
+      <!-- 12. Keine automatisierte Entscheidungsfindung -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">11. Automatisierte Entscheidungsfindung</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">12. Automatisierte Entscheidungsfindung</h2>
         <p class="text-[#7B6653]">
           Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt.
         </p>
       </section>
 
-      <!-- 12. Pflicht zur Bereitstellung -->
+      <!-- 13. Pflicht zur Bereitstellung -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">12. Pflicht zur Bereitstellung der Daten</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">13. Pflicht zur Bereitstellung der Daten</h2>
         <p class="text-[#7B6653]">
           Die Bereitstellung personenbezogener Daten ist grundsätzlich freiwillig.
           Für die Bearbeitung von Kontaktanfragen sind jedoch bestimmte Angaben (z. B. eine gültige E-Mail-Adresse)
@@ -267,7 +266,7 @@
         <div class="sm:text-right">
           <h3 class="text-[#fbfcf4] font-bold text-lg mb-4">Rechtliches</h3>
           <div class="space-y-2">
-            <a href="impressum.html"   class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
+            <a href="impressum.html" class="block text-[#fbfcf4]/80 hover:text-[#fbfcf4] transition-colors">Impressum</a>
             <a href="datenschutz.html" aria-current="page" class="block text-[#fbfcf4] font-semibold transition-colors">Datenschutz</a>
           </div>
         </div>
