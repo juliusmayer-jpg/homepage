@@ -4,6 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutzerklärung | terralytica</title>
+
+  <!-- 1. Consent Default -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  </script>
+
+  <!-- 2. Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- 3. Klaro -->
+  <script>
+    var klaroConfig = {
+      version: 1,
+      acceptAll: true,
+      lang: 'de',
+      services: [
+        {
+          name: 'google-analytics',
+          title: 'Google Analytics',
+          purposes: ['analytics'],
+          cookies: [/^_ga/, /^_gid/],
+          onAccept: `gtag('consent', 'update', { 'analytics_storage': 'granted' });`,
+          onDecline: `gtag('consent', 'update', { 'analytics_storage': 'denied' });`
+        }
+      ]
+    };
+  </script>
+  <script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js" data-config="klaroConfig"></script>
+
+  <!-- 4. Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
@@ -44,7 +80,7 @@
   <main class="pt-32 pb-20">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl md:text-4xl font-bold text-[#523B2A] mb-2">Datenschutzerklärung</h1>
-      <p class="text-[#7B6653] mb-10">Stand: Februar 2026</p>
+      <p class="text-[#7B6653] mb-10">Stand: März 2026</p>
 
       <!-- 1. Verantwortlicher -->
       <section class="mb-8">
@@ -107,9 +143,31 @@
         </p>
       </section>
 
-      <!-- 5. E-Mail -->
+      <!-- 5. Google Analytics -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">5. Kontaktaufnahme per E-Mail</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">5. Webanalyse (Google Analytics)</h2>
+        <p class="text-[#7B6653]">
+          Wir nutzen Google Analytics 4, einen Webanalysedienst der <strong>Google Ireland Limited, Gordon House,
+          Barrow Street, Dublin 4, Irland</strong>. Google Analytics verwendet Cookies, die eine Analyse der Benutzung
+          unserer Website ermöglichen. Die durch die Cookies erzeugten Informationen werden in der Regel an einen
+          Server von Google in den USA übertragen und dort gespeichert.
+        </p>
+        <p class="text-[#7B6653] mt-2">
+          <strong>Zweck:</strong> Analyse des Nutzerverhaltens zur Verbesserung unseres Webangebots.<br />
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Die Verarbeitung erfolgt
+          ausschließlich nach Ihrer ausdrücklichen Zustimmung über unser Cookie-Einwilligungsbanner.<br />
+          <strong>Cookies:</strong> _ga (Speicherdauer: 2 Jahre), _gid (Speicherdauer: 24 Stunden).<br />
+          <strong>Drittlandübermittlung:</strong> USA, abgesichert über EU-Standardvertragsklauseln (SCCs).<br />
+          <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit über unser Cookie-Banner widerrufen.<br />
+          Weitere Informationen:
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+             class="text-[#523B2A] hover:text-[#7B6653] underline">Datenschutzerklärung von Google</a>.
+        </p>
+      </section>
+
+      <!-- 6. E-Mail -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">6. Kontaktaufnahme per E-Mail</h2>
         <p class="text-[#7B6653]">
           Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten
           zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.
@@ -118,27 +176,28 @@
         </p>
       </section>
 
-      <!-- 6. Cookies -->
+      <!-- 7. Cookies -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">6. Cookies</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">7. Cookies</h2>
         <p class="text-[#7B6653]">
-          Diese Website verwendet <strong>keine eigenen Cookies</strong> und setzt keine Tracking- oder Analyse-Tools ein.
+          Diese Website verwendet <strong>keine eigenen Tracking-Cookies</strong> ohne Ihre Einwilligung.
+          Google Analytics-Cookies werden erst nach Ihrer ausdrücklichen Zustimmung über unser Cookie-Banner gesetzt.
           Technisch bedingte Cookies durch den Hostinganbieter sind nicht ausgeschlossen; Details siehe Datenschutzerklärung von GitHub.
         </p>
       </section>
 
-      <!-- 7. SSL -->
+      <!-- 8. SSL -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">7. SSL-Verschlüsselung</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">8. SSL-Verschlüsselung</h2>
         <p class="text-[#7B6653]">
           Diese Website nutzt aus Sicherheitsgründen eine SSL/TLS-Verschlüsselung.
           Eine verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile und dem Schloss-Symbol im Browser.
         </p>
       </section>
 
-      <!-- 8. Betroffenenrechte -->
+      <!-- 9. Betroffenenrechte -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">8. Ihre Rechte (Art. 15–22 DSGVO)</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">9. Ihre Rechte (Art. 15–22 DSGVO)</h2>
         <p class="text-[#7B6653] mb-3">Sie haben folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
         <ul class="text-[#7B6653] space-y-2 list-none">
           <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO)</li>
@@ -154,9 +213,9 @@
         </p>
       </section>
 
-      <!-- 9. Aufsichtsbehörde -->
+      <!-- 10. Aufsichtsbehörde -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">10. Beschwerderecht bei der Aufsichtsbehörde</h2>
         <p class="text-[#7B6653]">
           Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
           Zuständige Behörde für Bayern:
@@ -170,17 +229,17 @@
         </p>
       </section>
 
-      <!-- 10. Keine automatisierte Entscheidungsfindung -->
+      <!-- 11. Keine automatisierte Entscheidungsfindung -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">10. Automatisierte Entscheidungsfindung</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">11. Automatisierte Entscheidungsfindung</h2>
         <p class="text-[#7B6653]">
           Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt.
         </p>
       </section>
 
-      <!-- 11. Pflicht zur Bereitstellung -->
+      <!-- 12. Pflicht zur Bereitstellung -->
       <section class="mb-8">
-        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">11. Pflicht zur Bereitstellung der Daten</h2>
+        <h2 class="text-xl font-semibold text-[#523B2A] mb-3">12. Pflicht zur Bereitstellung der Daten</h2>
         <p class="text-[#7B6653]">
           Die Bereitstellung personenbezogener Daten ist grundsätzlich freiwillig.
           Für die Bearbeitung von Kontaktanfragen sind jedoch bestimmte Angaben (z. B. eine gültige E-Mail-Adresse)
