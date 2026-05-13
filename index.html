@@ -57,16 +57,16 @@
 
   <!-- HERO -->
   <section id="hero" class="relative min-h-screen pt-16 sm:pt-20 overflow-hidden">
-    <!-- Hintergrundbild -->
+    <!-- Hintergrundbild: auf kleinen Screens auf den linken Herrn fokussiert, ab md zentriert -->
     <img
       src="header.png"
       alt="Solaranlage auf landwirtschaftlicher Fläche"
-      class="absolute inset-0 w-full h-full object-cover"
+      class="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center"
       onerror="this.parentElement.style.background='linear-gradient(to bottom right, #523B2A, #7B6653)'; this.style.display='none';"
     />
     <!-- Text-Container unten rechts, rechtsbündig -->
     <div class="absolute inset-0 flex items-end justify-end pointer-events-none">
-      <div class="relative max-w-5xl text-right px-6 sm:px-10 lg:px-16 pb-12 sm:pb-16 lg:pb-24 mr-2 sm:mr-6 lg:mr-10 pointer-events-auto">
+      <div class="relative w-full max-w-7xl text-right px-6 sm:px-10 lg:px-12 pb-12 sm:pb-16 lg:pb-24 mr-2 sm:mr-6 lg:mr-10 pointer-events-auto">
         <!-- Weich auslaufender Blur-Hintergrund (ohne harte Kanten) -->
         <div
           class="absolute pointer-events-none"
@@ -75,15 +75,17 @@
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             background-color: rgba(0,0,0,0.22);
-            mask-image: radial-gradient(ellipse 80% 70% at 55% 55%, black 35%, transparent 85%);
-            -webkit-mask-image: radial-gradient(ellipse 80% 70% at 55% 55%, black 35%, transparent 85%);
+            mask-image: radial-gradient(ellipse 90% 75% at 60% 55%, black 45%, transparent 95%);
+            -webkit-mask-image: radial-gradient(ellipse 90% 75% at 60% 55%, black 45%, transparent 95%);
           "
         ></div>
-        <!-- Text -->
-        <h1 class="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white" style="text-shadow: 0 2px 16px rgba(0,0,0,0.55);">
-          Professionelle Gutachten für Ihr Solarprojekt auf landwirtschaftlichen Flächen
+        <!-- Überschrift: ab lg-Breakpoint in 2 Zeilen erzwungen -->
+        <h1 class="relative max-w-5xl ml-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white" style="text-shadow: 0 2px 16px rgba(0,0,0,0.55);">
+          Professionelle Gutachten<br class="hidden lg:inline" />
+          für Ihr Solarprojekt auf landwirtschaftlichen Flächen
         </h1>
-        <p class="relative text-base sm:text-lg md:text-xl text-white leading-relaxed" style="text-shadow: 0 1px 10px rgba(0,0,0,0.55);">
+        <!-- Untertitel kann die volle Container-Breite nutzen, passt auf großen Screens in eine Zeile -->
+        <p class="relative text-base sm:text-base lg:text-base text-white leading-relaxed" style="text-shadow: 0 1px 10px rgba(0,0,0,0.55);">
           terralytica begleitet Sie von der ersten Erkundung bis zur erfolgreichen Umsetzung Ihres Solarprojekts mit präzisen, verlässlichen Gutachten.
         </p>
       </div>
@@ -197,10 +199,10 @@
             Für spezialisierte Fragestellungen ergänzt uns ein interdisziplinäres Expertennetzwerk – so werden wir zum Beispiel im Naturschutz durch Spezialistinnen und Spezialisten für alle planungsrelevanten Artengruppen (u. a. Avifauna, Säugetiere inkl. Fledermäuse, Amphibien, Reptilien, Libellen, Tagfalter, Heuschrecken) unterstützt oder verfügen über zertifizierte Partner bei der Kampfmittelsondierung.
           </p>
           <ul class="space-y-4">
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Spezialisiert auf Solaranlagen auf landwirtschaftlichen Flächen</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Präzise Gutachten in verlässlicher Bearbeitungszeit</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Ganzheitliche Begleitung von der Vorerkundung bis zur Übergabe</span></li>
-            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Nachhaltige und naturverträgliche Lösungsansätze</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Wir sind auf Solaranlagen auf landwirtschaftlichen Flächen spezialisiert.</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Unsere Gutachten erstellen wir in verlässlicher Bearbeitungszeit.</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Ganzheitliche Begleitung ist für uns selbstverständlich.</span></li>
+            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8B9E82] shrink-0 mt-0.5"></i><span class="text-[#7B6653] text-base">Wir vertreten nachhaltige und naturverträgliche Lösungsansätze.</span></li>
           </ul>
         </div>
 
